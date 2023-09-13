@@ -33,15 +33,15 @@ CREATE TABLE IF NOT EXISTS Track (
 	duration TIME NOT NULL
 	);
 	
-CREATE TABLE IF NOT EXISTS Сollection (
+CREATE TABLE IF NOT EXISTS Collection (
 	id SERIAL PRIMARY KEY,
 	name_collection VARCHAR(40) NOT NULL,
 	year_release int NOT NULL
 	);
 	
-CREATE TABLE IF NOT EXISTS trackcollection (
+CREATE TABLE IF NOT EXISTS Trackcollection (
 	id_track INTEGER REFERENCES Track(id),
-	id_collection INTEGER REFERENCES collection(id),
+	id_collection INTEGER REFERENCES Collection(id),
 	CONSTRAINT TC PRIMARY KEY (id_track, id_collection)
 	);
 
