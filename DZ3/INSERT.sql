@@ -8,13 +8,13 @@ INSERT INTO albumexecutor (id_album, id_executor)
 	VALUES (100, 1), (100, 2);
 
 INSERT INTO Track (id, id_album, name_track, duration)
-	VALUES (1, 100, 'Хочу_перемен (Cover)', '00:03:05'), (2, 100, 'Кукушка (Cover)', '00:03:35'), ;
+	VALUES (1, 100, 'Хочу_перемен (Cover)', '00:03:05'), (2, 100, 'Кукушка (Cover)', '00:03:35');
 
 INSERT INTO TrackExecutor (id_track, id_executor) 
 	VALUES (1, 1), (2,2);
 
 INSERT INTO genre (id, name_genre) 
-	VALUES (1, 'рок'), (2, 'поп'), (3, 'фолк') (4, 'инструментал');
+	VALUES (1, 'рок'), (2, 'поп'), (3, 'фолк'), (4, 'инструментал');
 
 INSERT INTO executor (id, name_executor) 
 	VALUES (3, 'Ai mori'), (4, 'Kenney Polson'), (5, 'Guido Negraszus'), (6, 'Shoxrux Jamol'), (7, 'Александр Шевченко');
@@ -75,6 +75,7 @@ insert into trackexecutor (id_track, id_executor)
     	(SELECT Id FROM track WHERE name_track ='Белым на белом'), 
     	(SELECT Id FROM executor WHERE name_executor='Александр Шевченко')	
     );
+   
 insert into executorgenre (id_genre, id_executor)
 	values  
 	(
@@ -98,52 +99,52 @@ insert into executorgenre (id_genre, id_executor)
     	(SELECT Id FROM executor WHERE name_executor='Александр Шевченко')
     );
    
-   INSERT INTO Сollection (id, name_collection, year_release) 
+INSERT INTO Collection (id, name_collection, year_release) 
 	VALUES (1, 'Сборник 19', 2019), (2, 'Сборник 20', 2020), (3, 'Сборник 21', 2021), (4, 'Сборник 22', 2022);
 
 INSERT INTO trackcollection (id_track, id_collection)
 	values
 	(
 		(SELECT Id FROM track WHERE name_track ='My Infinity'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 19')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 19')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='Sevishkanlar'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 19')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 19')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='Black Swan'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 20')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 20')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='Sevishkanlar'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 20')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 20')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='Sevishkanlar'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 21')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 21')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='in the shadow'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 21')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 21')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='Белым на белом'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 21')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 21')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='My Infinity'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 22')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 22')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='Кукушка (Cover)'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 22')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 22')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='Хочу_перемен (Cover)'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 22')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 22')
     ),
     (
 		(SELECT Id FROM track WHERE name_track ='Белым на белом'), 
-    	(SELECT Id FROM Сollection WHERE name_collection='Сборник 22')
+    	(SELECT Id FROM Collection WHERE name_collection='Сборник 22')
     );
