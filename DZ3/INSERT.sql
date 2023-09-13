@@ -1,4 +1,4 @@
-INSERT INTO Album (id, name, year_release) 
+INSERT INTO Album (id, name_album, year_release) 
 	VALUES (100, 'Хочу_перемен_Cover', 2022);
 
 INSERT INTO executor (id, name_executor) 
