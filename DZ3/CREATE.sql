@@ -44,9 +44,3 @@ CREATE TABLE IF NOT EXISTS Trackcollection (
 	id_collection INTEGER REFERENCES Collection(id),
 	CONSTRAINT TC PRIMARY KEY (id_track, id_collection)
 	);
-
-CREATE TABLE IF NOT EXISTS TrackExecutor (
-	id_track INTEGER REFERENCES Track(id),
-	id_executor INTEGER REFERENCES Executor(id),
-	CONSTRAINT TE PRIMARY KEY (id_track, id_executor)
-	);
