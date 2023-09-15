@@ -20,7 +20,13 @@ INSERT INTO executor (id, name_executor)
 	VALUES (3, 'Ai mori'), (4, 'Kenney Polson'), (5, 'Guido Negraszus'), (6, 'Shoxrux Jamol'), (7, 'Александр Шевченко');
 	
 INSERT INTO album (id, name_album, year_release) 
-	VALUES (101, 'in the shadow', 2021), (102, 'Love on a Two Way Street', 2020), (103, 'Reloaded', 2019), (104, 'Ikkinchi', 2018), (105, 'Белым на белом', 2021);
+	values
+		(101, 'in the shadow', 2021),
+		(102, 'Love on a Two Way Street', 2020),
+		(103, 'Reloaded', 2019),
+		(104, 'Ikkinchi', 2018),
+		(105, 'Белым на белом', 2021),
+		(106, 'no name', 2023);
 
 INSERT INTO track (id, id_album, name_track, duration) 
 	VALUES 
@@ -28,7 +34,20 @@ INSERT INTO track (id, id_album, name_track, duration)
 		(4, (SELECT Id FROM album WHERE name_album ='Love on a Two Way Street'), 'Black Swan', '00:04:56'),
 		(5, (SELECT Id FROM album WHERE name_album ='Reloaded'), 'My Infinity', '00:04:34'), 
 		(6, (SELECT Id FROM album WHERE name_album ='Ikkinchi'), 'Sevishkanlar', '00:04:59'), 
-		(7, (SELECT Id FROM album WHERE name_album ='Белым на белом'), 'Белым на белом', '00:03:41');
+		(7, (SELECT Id FROM album WHERE name_album ='Белым на белом'), 'Белым на белом', '00:03:41'),
+		(8, 106, 'myself', '00:03:41'),
+		(9, 106, 'by myself', '00:03:41'),
+		(10, 106, 'bemy self', '00:03:41'),
+		(11, 106, 'myself by', '00:03:41'),
+		(12, 106, 'by myself', '00:03:41'),
+		(13, 106, 'by myself by', '00:03:41'),
+		(14, 106, 'beemy', '00:03:41'),
+		(15, 106, 'premyne', '00:03:41'),
+		(16, 106, 'my own', '00:03:41'),
+		(17, 106, 'own my', '00:03:41'),
+		(18, 106, 'my', '00:03:41'),
+		(19, 106, 'oh my god', '00:03:41');
+		
 
 INSERT INTO albumexecutor (id_album, id_executor)
 	values
